@@ -1,4 +1,10 @@
 
+:root {
+  --company-info-column: 3;
+  --achievements-section-column: 2;
+  --achievements-row: 4;
+}
+
 $darken-amount: 25%;
 $font-size: 14;
 $font-size-px: calc($font-size * 1px);

@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import './Dots.scss';
 
 type DotsProps = {
-  align?: 'center' | 'right';
+  align?: 'center' | 'left';
 }
 
 const Dots: FC<DotsProps> = ({align = 'center'}) => {

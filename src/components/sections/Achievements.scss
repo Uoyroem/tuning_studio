@@ -1,0 +1,51 @@
+
+@import "../../styles/index";
+
+.achievements-section {
+  display: flex;
+
+  & > div {
+    width: calc(100% / var(--achievements-section-column));
+  }
+}
+
+.achievements {
+  display: flex;
+  justify-content: flex-end;
+  height: calc(7.375em * var(--achievements-row));
+  &__column-2 {
+    transform: translateY(1.666666667em);
+  }
+  &__item {
+    border: $border;
+    display: flex;
+    padding: 1.041666667em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 7.375em;
+    width: 13.25em;
+  }
+  &__number {
+    font-family: 'ReformaGroteskDemiC', sans-serif;
+    font-style: normal;
+    font-size: 1.714285714em;
+    font-weight: 600;
+    line-height: 140%;
+    color: $red-color;
+
+    /* or 34px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &:before {
+      content: "#";
+      font-size: 0.5em;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: 1.142857143em;
+  }
+}
