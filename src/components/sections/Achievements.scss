@@ -13,8 +13,23 @@
   display: flex;
   justify-content: flex-end;
   height: calc(7.375em * var(--achievements-row));
+  &__column-1 {
+    .achievements__item {
+      &:last-child {
+        border-bottom: $border;
+      }
+    }
+  }
   &__column-2 {
     transform: translateY(1.666666667em);
+
+    .achievements__item {
+      border-left: none;
+      &:last-child {
+        border-left: $border;
+        border-bottom: $border;
+      }
+    }
   }
   &__item {
     border: $border;
@@ -25,6 +40,7 @@
     align-items: center;
     height: 7.375em;
     width: 13.25em;
+    border-bottom: none;
   }
   &__number {
     font-family: 'ReformaGroteskDemiC', sans-serif;
@@ -47,5 +63,10 @@
   &__text {
     text-align: center;
     font-size: 1.142857143em;
+  }
+  &__cup {
+    width: 1.5525em;
+    height: 1.892916667em;
+    margin-bottom: 0.916666667em;
   }
 }

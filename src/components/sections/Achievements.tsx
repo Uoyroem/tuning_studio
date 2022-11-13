@@ -3,7 +3,7 @@ import Container from '../ui/Container';
 import Dots from '../ui/Dots';
 import './Achievements.scss';
 import Section from './Section';
-import cup from '../../images/cup.png';
+
 
 const Achievements = () => {
   return (
@@ -53,9 +53,7 @@ const Achievements = () => {
                 <p className="achievements__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui </p>
               </div>
               <div className="achievements__item">
-                <div className="achievements__cup">
-                  <img src={cup} alt="The just cup."/>
-                </div>
+                <img className="achievements__cup" src={require('../../images/cup.png')} alt="The just cup."/>
                 <p className="achievements__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dui </p>
               </div>
             </div>
