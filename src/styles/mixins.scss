@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin link($color: $main-font-color) {
+  > a {
+    font-family: inherit;
+    color: $color;
+    text-decoration: none;
+
+    transition: $transition-delay;
+
+    &:hover {
+      color: darken($color, $darken-amount);
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $color;
+    }
+
+    @content;
+  }
+}

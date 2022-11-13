@@ -1,0 +1,31 @@
+
+@import "../styles/index";
+
+.menu {
+  width: 1.666666667em;
+  height: 0.125em;
+  background-color: $red-color;
+
+  &:after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 10px;
+    top: 0.333333333em;
+
+    width: 1.666666667em;
+    height: 0.125em;
+    background-color: $red-color;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 10px;
+    bottom: calc(0.333333333em + 0.125em);
+
+    width: 1.666666667em;
+    height: 0.125em;
+    background-color: $red-color;
+  }
+}

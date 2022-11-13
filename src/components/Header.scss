@@ -1,0 +1,80 @@
+
+@import "../styles/index";
+
+.header {
+  height: 41.721428571em;
+  max-height: 1000px;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.4) 78.8%, #141414 100%), center / cover no-repeat url("../images/header_background.png");
+
+  .info {
+    text-align: center;
+    padding-bottom: 4.291666667em;
+
+    &__title {
+      margin-top: 5.5rem;
+      text-transform: uppercase;
+      color: $red-color;
+      font-family: 'ReformaGroteskBoldC', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 6.25em;
+      line-height: 125%;
+    }
+
+    &__text {
+      width: 10.925em;
+      margin: 0 auto 1.666666667em;
+      font-size: 1.666666667em;
+      line-height: 120%;
+    }
+  }
+}
+
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 9.5em;
+
+    width: calc(100% / var(--company-info-column));
+    border: $border;
+    border-right: none;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  &__title {
+    font-size: 1.285714286em;
+    margin-bottom: 0.833333333em;
+  }
+
+  &__text {
+    width: 18.928571429em;
+    color: $red-color;
+    font-family: 'ReformaGroteskDemiC', sans-serif;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 140%;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    & > div {
+      margin-bottom: 0.625em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+

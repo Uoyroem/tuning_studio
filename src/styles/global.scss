@@ -1,0 +1,99 @@
+@import "variables";
+
+:root {
+  --company-info-column: 3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ReformaGroteskMediumC", sans-serif;
+  font-size: $font-size-px;
+  font-weight: 500;
+  color: $main-font-color;
+  background-color: $main-background-color;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskBoldC';
+  src: url('../fonts/ReformaGroteskBoldC.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskBoldC.woff') format('woff'),
+  url('../fonts/ReformaGroteskBoldC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskBoldC';
+  src: url('../fonts/ReformaGroteskBoldC_1.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskBoldC_1.woff') format('woff'),
+  url('../fonts/ReformaGroteskBoldC_1.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskDemiC';
+  src: url('../fonts/ReformaGroteskDemiC.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskDemiC.woff') format('woff'),
+  url('../fonts/ReformaGroteskDemiC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskDemiC';
+  src: url('../fonts/ReformaGroteskDemiC_1.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskDemiC_1.woff') format('woff'),
+  url('../fonts/ReformaGroteskDemiC_1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskLightC';
+  src: url('../fonts/ReformaGroteskLightC.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskLightC.woff') format('woff'),
+  url('../fonts/ReformaGroteskLightC.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskMediumC';
+  src: url('../fonts/ReformaGroteskMediumC.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskMediumC.woff') format('woff'),
+  url('../fonts/ReformaGroteskMediumC.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskLightC';
+  src: url('../fonts/ReformaGroteskLightC_1.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskLightC_1.woff') format('woff'),
+  url('../fonts/ReformaGroteskLightC_1.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReformaGroteskMediumC';
+  src: url('../fonts/ReformaGroteskMediumC_1.woff2') format('woff2'),
+  url('../fonts/ReformaGroteskMediumC_1.woff') format('woff'),
+  url('../fonts/ReformaGroteskMediumC_1.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
