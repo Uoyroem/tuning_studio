@@ -3,9 +3,11 @@
 
 .achievements-section {
   display: flex;
+  flex-wrap: wrap;
 
   & > div {
     width: calc(100% / var(--achievements-section-column));
+
   }
 }
 
@@ -14,22 +16,10 @@
   justify-content: flex-end;
   height: calc(7.375em * var(--achievements-row));
   &__column-1 {
-    .achievements__item {
-      &:last-child {
-        border-bottom: $border;
-      }
-    }
+    margin-right: -1px;
   }
   &__column-2 {
     transform: translateY(1.666666667em);
-
-    .achievements__item {
-      border-left: none;
-      &:last-child {
-        border-left: $border;
-        border-bottom: $border;
-      }
-    }
   }
   &__item {
     border: $border;
@@ -40,7 +30,7 @@
     align-items: center;
     height: 7.375em;
     width: 13.25em;
-    border-bottom: none;
+    margin-bottom: -1px;
   }
   &__number {
     font-family: 'ReformaGroteskDemiC', sans-serif;
@@ -68,5 +58,23 @@
     width: 1.5525em;
     height: 1.892916667em;
     margin-bottom: 0.916666667em;
+  }
+}
+
+.achievements-info {
+  &__title {
+    font-family: 'ReformaGroteskDemiC', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.25em;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.666666667rem;
+  }
+  &__text {
+    margin-top: 2.642857143rem;
+    width: 21.916666667rem;
+    letter-spacing: 0.03em;
   }
 }

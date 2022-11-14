@@ -10,10 +10,10 @@ const Achievements = () => {
     <Section>
       <Container>
         <div className="achievements-section">
-          <div>
-            <h2>наши достижения от кубка россии до чемпионатов мира</h2>
+          <div className="achievements-info">
+            <h2 className="achievements-info__title">наши достижения от кубка россии до чемпионатов мира</h2>
             <Dots align="left"/>
-            <p>
+            <p className="achievements-info__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitant tincidunt aliquam tincidunt
               pretium sodales. Tristique odio pellentesque et tincidunt posuere arcu purus lobortis risus.
               Urna, ut amet odio orci magnis praesent ultrices. Praesent malesuada lacus tellus tristique sit at.

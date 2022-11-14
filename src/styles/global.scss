@@ -8,9 +8,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: $font-size-px;
+}
+
 body {
   font-family: "ReformaGroteskMediumC", sans-serif;
-  font-size: $font-size-px;
   font-weight: 500;
   color: $main-font-color;
   background-color: $main-background-color;
