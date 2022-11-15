@@ -1,0 +1,55 @@
+
+@import "../../styles/index";
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__button-left {
+    position: relative;
+    left: -2.5rem;
+  }
+  &__button-right {
+    position: relative;
+    left: 2.5rem;
+  }
+}
+
+.text-variant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.916666667rem;
+  &__image {
+    width: 17.333333333rem;
+    height: 14.583333333rem;
+  }
+  &__text {
+    position: relative;
+    bottom: 3rem;
+    display: flex;
+    z-index: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 11.916666667rem;
+    font-family: 'ReformaGroteskDemiC', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    &::before {
+      position: relative;
+      z-index: -1;
+      top: 1.5rem;
+      content: "";
+      display: block;
+      width: 15.25rem;
+      height: 2.916666667rem;
+      background-color: $red-color;
+    }
+  }
+
+}
