@@ -11,8 +11,8 @@ export interface SlideItem {
 
 type SliderProps = {
   slideItems: SlideItem[];
-  step: number;
-  variant: 'text';
+  step?: number;
+  variant: 'text' | 'photo';
 };
 
 const TextVariant: FC<SlideItem> = ({image, text, width}) => {
@@ -24,7 +24,8 @@ const TextVariant: FC<SlideItem> = ({image, text, width}) => {
   );
 };
 
-const Slider: FC<SliderProps> = ({slideItems, step, variant}) => {
+// Как-то сделано не так как хотелось бы.
+const Slider: FC<SliderProps> = ({slideItems, step = 1, variant}) => {
   if (slideItems.length % step !== 0) throw new Error('The step must be a multiple of the length of the elements.');
 
   const [offset, setOffset] = useState(0);
@@ -51,11 +52,28 @@ const Slider: FC<SliderProps> = ({slideItems, step, variant}) => {
 
   if (variant === 'text') {
     return (
-      <div className="slider">
-        <SliderButton className="slider__button-left" slide={slide} side={'left'}/>
+      <div className="text-variant-slider">
+        <SliderButton className="text-variant-slider__button-left" slide={slide} side="left"/>
         {slideItems.map((slideItem) => <TextVariant key={slideItem.id} {...slideItem} width={slideItem.width == null ? 100 / step : slideItem.width}/>)
                    .filter((_, index) => index >= offset && index < offset + step)}
-        <SliderButton className="slider__button-right" slide={slide} side={'right'}/>
+        <SliderButton className="text-variant-slider__button-right" slide={slide} side="right"/>
+      </div>
+    );
+  } else if (variant === 'photo') {
+    if (step !== 1) throw new Error('Stop should be 1.');
+
+    return (
+      <div className="photo-variant-slider">
+        {slideItems.map((slideItem) => (
+          <div key={slideItem.id} className="photo-variant">
+            <img className="photo-variant__image" src={slideItem.image} alt=""/>
+            <div className="photo-variant__info">
+              <SliderButton slide={slide} side="left"/>
+              <p className="photo-variant__text">{slideItem.text}</p>
+              <SliderButton slide={slide} side="right"/>
+            </div>
+          </div>
+        )).filter((_, index) => index === offset)}
       </div>
     );
   }
